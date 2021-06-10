@@ -100,71 +100,6 @@
 
     </div>
 
-    <script src="https://sheet2api.com/v1/template.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"
-        integrity="sha512-kBFfSXuTKZcABVouRYGnUo35KKa1FBrYgwG4PAx7Z2Heroknm0ca2Fm2TosdrrI356EDHMW383S3ISrwKcVPUw=="
-        crossorigin="anonymous"></script>
-    <script>
-
-        $('#exampleModal').modal({
-            backdrop: false,
-            show: false
-        })
-
-        $('#form-submit').click(function () {
-            $('#invite-form').submit();
-        });
-
-        $('#email-list-form-submit').click(function () {
-            $('#email-list-form').submit();
-        });
-
-        $("#email-list-form").submit(function (event) {
-            event.preventDefault();
-            var form = $('#email-list-form')
-            if (form[0].checkValidity() === true) {
-                var formData = {
-                    'email': form.find('input[name=email]').val()
-                };
-                $.ajax({
-                    type: 'POST',
-                    url: form.attr('target'),
-                    data: formData
-                }).done(function (data) {
-                    alert('Thank you. We\'ll be in touch!')
-                });
-            } else {
-                alert('Please fill out the form');
-            }
-
-        });
-
-        $("#invite-form").submit(function (event) {
-            event.preventDefault();
-            var form = $('#invite-form')
-            console.log(form[0].checkValidity());
-            if (form[0].checkValidity() === true) {
-                var formData = {
-                    'email': form.find('input[name=email]').val()
-                };
-                $.ajax({
-                    type: 'POST',
-                    url: form.attr('target'),
-                    data: formData
-                }).done(function (data) {
-                    $('.form-els').hide();
-                    $('.done-els').removeClass('d-none');
-                    $('.done-els').show();
-                });
-            } else {
-                alert('Please fill out the form');
-            }
-        });
-    </script>
-
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
@@ -194,6 +129,71 @@
                 </div>
             </div>
         </div>
+
+        <script src="https://sheet2api.com/v1/template.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+            integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"
+            integrity="sha512-kBFfSXuTKZcABVouRYGnUo35KKa1FBrYgwG4PAx7Z2Heroknm0ca2Fm2TosdrrI356EDHMW383S3ISrwKcVPUw=="
+            crossorigin="anonymous"></script>
+        <script>
+
+            $('#exampleModal').modal({
+                backdrop: false,
+                show: false
+            })
+
+            $('#form-submit').click(function () {
+                $('#invite-form').submit();
+            });
+
+            $('#email-list-form-submit').click(function () {
+                $('#email-list-form').submit();
+            });
+
+            $("#email-list-form").submit(function (event) {
+                event.preventDefault();
+                var form = $('#email-list-form')
+                if (form[0].checkValidity() === true) {
+                    var formData = {
+                        'email': form.find('input[name=email]').val()
+                    };
+                    $.ajax({
+                        type: 'POST',
+                        url: form.attr('target'),
+                        data: formData
+                    }).done(function (data) {
+                        alert('Thank you. We\'ll be in touch!')
+                    });
+                } else {
+                    alert('Please fill out the form');
+                }
+
+            });
+
+            $("#invite-form").submit(function (event) {
+                event.preventDefault();
+                var form = $('#invite-form')
+                console.log(form[0].checkValidity());
+                if (form[0].checkValidity() === true) {
+                    var formData = {
+                        'email': form.find('input[name=email]').val()
+                    };
+                    $.ajax({
+                        type: 'POST',
+                        url: form.attr('target'),
+                        data: formData
+                    }).done(function (data) {
+                        $('.form-els').hide();
+                        $('.done-els').removeClass('d-none');
+                        $('.done-els').show();
+                    });
+                } else {
+                    alert('Please fill out the form');
+                }
+            });
+        </script>
 </body>
 
 </html>
