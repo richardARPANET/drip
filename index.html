@@ -18,6 +18,7 @@
             color: #b3b3b3 !important;
             font-family: Helvetica, sans-serif !important;
         }
+
         a {
             color: #b3b3b3 !important;
         }
@@ -27,7 +28,7 @@
         }
 
         .masthead-bg {
-            background:  rgba(0, 0,0, 0.4);
+            background: rgba(0, 0, 0, 0.4);
         }
 
         h1,
@@ -60,14 +61,14 @@
         }
     </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EJ04RKSLNS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EJ04RKSLNS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-EJ04RKSLNS');
-</script>
+        gtag('config', 'G-EJ04RKSLNS');
+    </script>
 </head>
 
 <body>
@@ -87,48 +88,16 @@
 
 
                         <div class="">
-                            <button class="btn btn-dark bg-dark border-dark pt-2 pb-2 pl-4 pr-4" type="submit" data-toggle="modal"
-                                data-target="#exampleModal" id="submit-button"
+                            <button class="btn btn-dark bg-dark border-dark pt-2 pb-2 pl-4 pr-4" type="submit"
+                                data-toggle="modal" data-target="#exampleModal" id="submit-button"
                                 style="font-weight: bold; width:190px;">Notify Me</button>
                         </div>
-
-
-
 
                     </div>
                 </div>
             </div>
         </div>
 
-                        <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                            aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title text-dark" id="createSyncModalLabel">Notify Me</h5>
-                                    </div>
-                                    <div class="modal-body text-dark">
-                                        <p>We'll email you once we're live. No spam ever.</p>
-                                        <form class="input-group  form-els" id="invite-form" method="POST"
-                                            target="https://sheet2api.com/v1/CMMyLxNrQj_b/driplegit-email-list">
-                                            <div class="form-group" style="width:100%">
-                                                <input type="email" name="email" class="form-control"
-                                                    placeholder="Enter your Email..." required="required">
-                                            </div>
-                                        </form>
-                                        <div class="d-none done-els">
-                                            <p class="alert alert-success">Thanks! We'll be in touch.</p>
-
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-dark button-dark bg-dark form-els"
-                                            id="form-submit">Notify Me</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
     </div>
 
     <script src="https://sheet2api.com/v1/template.js"></script>
@@ -195,6 +164,36 @@
             }
         });
     </script>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-dark" id="createSyncModalLabel">Notify Me</h5>
+                    </div>
+                    <div class="modal-body text-dark">
+                        <p>We'll email you once we're live. No spam ever.</p>
+                        <form class="input-group  form-els" id="invite-form" method="POST"
+                            target="https://sheet2api.com/v1/CMMyLxNrQj_b/driplegit-email-list">
+                            <div class="form-group" style="width:100%">
+                                <input type="email" name="email" class="form-control" placeholder="Enter your Email..."
+                                    required="required">
+                            </div>
+                        </form>
+                        <div class="d-none done-els">
+                            <p class="alert alert-success">Thanks! We'll be in touch.</p>
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-dark button-dark bg-dark form-els" id="form-submit">Notify
+                            Me</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 </body>
 
 </html>
